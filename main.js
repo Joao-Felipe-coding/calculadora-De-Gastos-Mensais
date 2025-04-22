@@ -20,5 +20,8 @@ function adicionar() {
     <td>${categoria}</td>
   `;
 
+  // Adiciona a nova linha à tabela
+  tabela.appendChild(novaLinha);
+
   }
 }
