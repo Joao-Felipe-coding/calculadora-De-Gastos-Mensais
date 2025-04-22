@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <script src="main.js"></script>
   <title>Lista de Tarefas</title>
 </head>
 <body>
@@ -17,7 +16,7 @@
     <input id="ipt" type="text" placeholder="Digite sua tarefa aqui">
     <br>
     <label for="">Valor</label>
-    <input id="ipt" type="number" placeholder="Digite o valor aqui">
+    <input id="ipt" type="text" placeholder="Digite o valor aqui">
     <br>
     <label for="">Categoria</label>
     <select id="categorias">
@@ -27,7 +26,7 @@
       <option value="Lazer">Lazer</option>
     </select>
     <br>
-    <button id="addTarefa" class="btn btn-primary mt-3">Adicionar Gasto</button>
+    <button id="addTarefa" class="btn btn-primary mt-3" onclick="adicionar()">Adicionar Gasto</button>
     <br>
     <table class="table mt-4">
       <thead>
@@ -42,5 +41,6 @@
       </tbody>
     </table>
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
