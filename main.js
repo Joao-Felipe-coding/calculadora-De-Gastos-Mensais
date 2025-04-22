@@ -1,3 +1,5 @@
+let totalGastos = 0;
+
 // Função para adicionar um gasto à tabela
 function adicionar() {
   // Captura os valores dos inputs
@@ -22,6 +24,10 @@ function adicionar() {
 
     // Adiciona a nova linha à tabela
     tabela.appendChild(novaLinha);
+
+    // Atualiza o total de gastos
+    totalGastos += valor;
+    document.getElementById('totalGastos').innerText = `Total de Gastos: R$ ${totalGastos.toFixed(2)}`;
 
     // Limpa os campos do formulário
     document.getElementById('descricao').value = '';
