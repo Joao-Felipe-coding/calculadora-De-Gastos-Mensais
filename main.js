@@ -23,5 +23,9 @@ function adicionar() {
   // Adiciona a nova linha à tabela
   tabela.appendChild(novaLinha);
 
+  // Limpa os campos do formulário
+  document.getElementById('ipt').value = '';
+  document.getElementById('ipt').nextElementSibling.value = '';
+  document.getElementById('categorias').value = 'Casa';
   }
 }
