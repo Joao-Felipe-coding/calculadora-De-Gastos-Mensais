@@ -20,7 +20,10 @@ function adicionar() {
       <td>${descricao}</td>
       <td>${valor.toFixed(2)}</td>
       <td>${categoria}</td>
-      <td><button class='btn btn-danger btn-sm' onclick='remover(this)'>Excluir</button></td>
+      <td>
+        <button class='btn btn-warning btn-sm' onclick='editar(this)'>Editar</button>
+        <button class='btn btn-danger btn-sm' onclick='remover(this)'>Excluir</button>
+      </td>
     `;
 
     // Adiciona a nova linha à tabela
@@ -41,6 +44,24 @@ function remover(botao) {
   const linha = botao.parentNode.parentNode;
   const valor = parseFloat(linha.cells[1].innerText);
   totalGastos -= valor;
+  document.getElementById('totalGastos').innerText = `Total de Gastos: R$ ${totalGastos.toFixed(2)}`;
+  linha.remove();
+}
+
+//Funcionalidade adicional
+function editar(botao) {
+  const linha = botao.parentNode.parentNode;
+  const descricaoAtual = linha.cells[0].innerText;
+  const valorAtual = parseFloat(linha.cells[1].innerText);
+  const categoriaAtual = linha.cells[2].innerText;
+
+  // Preenche os campos do formulário com os valores atuais
+  document.getElementById('descricao').value = descricaoAtual;
+  document.getElementById('valor').value = valorAtual;
+  document.getElementById('categorias').value = categoriaAtual;
+
+  // Remove a linha atual da tabela e atualiza o total de gastos
+  totalGastos -= valorAtual;
   document.getElementById('totalGastos').innerText = `Total de Gastos: R$ ${totalGastos.toFixed(2)}`;
   linha.remove();
 }
