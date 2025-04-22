@@ -12,5 +12,13 @@ function adicionar() {
     // Cria uma nova linha na tabela
   const tabela = document.getElementById('corpoLista');
   const novaLinha = document.createElement('tr');
+
+  // Adiciona as células com os valores
+  novaLinha.innerHTML = `
+    <td>${descricao}</td>
+    <td>${valor}</td>
+    <td>${categoria}</td>
+  `;
+
   }
 }
