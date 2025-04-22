@@ -20,6 +20,7 @@ function adicionar() {
       <td>${descricao}</td>
       <td>${valor.toFixed(2)}</td>
       <td>${categoria}</td>
+      <td><button class='btn btn-danger btn-sm' onclick='remover(this)'>Excluir</button></td>
     `;
 
     // Adiciona a nova linha à tabela
@@ -34,4 +35,12 @@ function adicionar() {
     document.getElementById('valor').value = '';
     document.getElementById('categorias').value = 'Casa';
   }
+}
+
+function remover(botao) {
+  const linha = botao.parentNode.parentNode;
+  const valor = parseFloat(linha.cells[1].innerText);
+  totalGastos -= valor;
+  document.getElementById('totalGastos').innerText = `Total de Gastos: R$ ${totalGastos.toFixed(2)}`;
+  linha.remove();
 }
