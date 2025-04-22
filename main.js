@@ -8,7 +8,9 @@ function adicionar() {
   // Verifica se os campos estão preenchidos
   if (!descricao || !valor || !categoria) {
     alert('Por favor, preencha todos os campos antes de adicionar um gasto.');
-    return;
+  } else {
+    // Cria uma nova linha na tabela
+  const tabela = document.getElementById('corpoLista');
+  const novaLinha = document.createElement('tr');
   }
-  
 }
