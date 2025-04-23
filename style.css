@@ -1,3 +1,67 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#titulo {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#addTarefa {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
 #descricao, #valor, #categorias {
   margin-bottom: 1rem;
+}
+
+#totalGastos {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+table th, table td {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+table th {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
 }
