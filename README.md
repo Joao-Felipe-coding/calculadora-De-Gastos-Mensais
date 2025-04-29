@@ -7,9 +7,9 @@ Este projeto é uma aplicação web simples para gerenciar e calcular os gastos 
 - Adicionar uma nova despesa com descrição, valor e categoria.
 - Exibir o total de gastos atualizados dinamicamente.
 - Remover despesas da lista.
-- Editar despesas existentes.
 
 ## Funcionalidades adicionais 
+- Edição de gasto cadastrado.
 
 ## Tecnologias Utilizadas
 - **HTML**: Estrutura da página.
